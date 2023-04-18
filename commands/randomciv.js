@@ -5,10 +5,10 @@ const Civs = require('../models/civs').init();
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('randomciv')
-		.setDescription('Replies with random civ!')
+		.setDescription('Takes in a list of players and randomly assigns their civ to them!')
 		.addStringOption(option =>
 			option.setName('players')
-				.setDescription('List player or players plaing.')
+				.setDescription('List players with comma seperating their names.')
 				.setRequired(true)),
 	async execute(interaction) {
 		const players = interaction.options.getString('players');
