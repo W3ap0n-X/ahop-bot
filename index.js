@@ -7,7 +7,8 @@ const { Client, Events, Collection, GatewayIntentBits } = require('discord.js');
 // const { dbConfig } = require('eloquify');
 require('dotenv').config();
 db_connection();
-// Create Discord Bot Connection
+
+// Define Client and intents
 const client = new Client({ intents: [
 	GatewayIntentBits.Guilds,
 	GatewayIntentBits.GuildMembers,
